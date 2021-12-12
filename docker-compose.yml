@@ -8,12 +8,18 @@ services:
     container_name: nginx
     networks:
       - Inception
+    volumes:
+      - /home/ssamadi/data/WordPress:/var/www/html
   wordpress:
       build: ./srcs/requirements/wordpress/.
       image: wordpress
       container_name: wordpress
+      ports:
+        - 9000:9000
       networks:
         - Inception
+      volumes:
+        - /home/ssamadi/data/WordPress:/var/www/html
 
 networks:
   Inception:
