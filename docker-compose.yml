@@ -18,12 +18,21 @@ services:
         - 9000:9000
       networks:
         - Inception
+      depends_on:
+        - mariadb
       volumes:
         - /home/ssamadi/data/WordPress:/var/www/html
-
+  mariadb:
+      build: ./srcs/requirements/mariadb/.
+      image: mariadb
+      container_name: mariadb
+      ports:
+        - 3306:3306
+      networks:
+        - Inception
+      volumes:
+        - /home/ssamadi/data/DB:/root/db
 networks:
   Inception:
         name: Inception
-        
 
-  
