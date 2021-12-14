@@ -30,8 +30,8 @@ services:
         - 3306:3306
       networks:
         - Inception
-      volumes:
-        - /home/ssamadi/data/DB:/root/db
+      # volumes:
+      #   - /home/ssamadi/data/DB:/var/lib/mysql/
 networks:
   Inception:
         name: Inception

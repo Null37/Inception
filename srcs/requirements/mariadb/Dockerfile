@@ -7,6 +7,6 @@ COPY . /root/
 
 RUN chmod +x tools/build_mariadb.sh && ./tools/build_mariadb.sh
 
-CMD mysqld_safe
 
+CMD ["sh", "run_front.sh"]
 
