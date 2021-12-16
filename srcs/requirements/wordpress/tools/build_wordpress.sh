@@ -7,13 +7,17 @@ apt-get -y install php7.3-fpm php-mysql
 apt-get -y update
 # apt-get -y upgrade
 
-apt-get -y install wget
+apt-get -y install curl
 apt-get -y update
 
-#create /var/www/html
+# create /var/www/html
 cd /var
 mkdir /var/www
 mkdir /var/www/html
+#cd /var/www/html/ && curl -O https://wordpress.org/latest.tar.gz
+
+# tar -xvf latest.tar.gz
+# rm -rf latest.tar.gz
 service php7.3-fpm start
 service php7.3-fpm stop 
 cd /root

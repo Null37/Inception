@@ -1,6 +1,5 @@
-#!/bin/sh
 
-sudo su
+
 
 apt-get -y update
 
