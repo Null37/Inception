@@ -1,4 +1,3 @@
-cd /var/www/html/ && curl -O https://wordpress.org/latest.tar.gz
-tar -xvf latest.tar.gz
-rm -rf latest.tar.gz
+cd /var/www/html ; cp /root/conf/wp-config.php . ; chmod 644 wp-config.php
+cd /var/www/html ; cp -R wordpress/* . ; rm -rf  wordpress
 php-fpm7.3 -F
